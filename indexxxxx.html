@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Automated Grocery List | NutriGuide</title>
+<link rel="stylesheet" href="newpages.css">
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">NutriGuide</div>
+    <a href="indexx.html" class="back">← Back to Home</a>
+</nav>
+
+<section class="page-header">
+    <h1>Automated Grocery List Generator</h1>
+    <p>Enter your weekly requirements and get your list instantly.</p>
+</section>
+
+<section class="form-section">
+    <form id="grocery-form">
+
+        <label>🍽️ Number of Meals per Day</label>
+        <input type="number" min="1" max="6" id="meals">
+
+        <label>🥗 Preferred Diet Type</label>
+        <select id="diet">
+            <option>Balanced Diet</option>
+            <option>High Protein</option>
+            <option>Vegetarian</option>
+            <option>Vegan</option>
+            <option>Keto</option>
+        </select>
+
+        <label>🛒 Special Requirements</label>
+        <input type="text" placeholder="Example: No dairy, low sugar..." id="special">
+
+        <button type="button" id="generate" class="btn">Generate Grocery List</button>
+    </form>
+</section>
+
+<section id="output" class="output-section"></section>
+
+<script>
+document.getElementById("generate").onclick = function () {
+    const meals = document.getElementById("meals").value;
+    const diet = document.getElementById("diet").value;
+    const special = document.getElementById("special").value;
+
+    document.getElementById("output").innerHTML = `
+        <h2>Your Grocery List</h2>
+        <ul>
+            <li>Fresh Vegetables & Fruits</li>
+            <li>Whole Grains / Rice / Roti Flour</li>
+            <li>Protein Sources (${diet})</li>
+            <li>Healthy Snacks</li>
+            <li>Ingredients for ${meals} meals/day</li>
+            <li>Special Requirements: ${special || "None"}</li>
+        </ul>
+    `;
+};
+</script>
+
+</body>
+</html>

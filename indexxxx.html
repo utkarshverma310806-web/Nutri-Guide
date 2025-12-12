@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NutriGuide – Smart Personalized Diet Planning</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style2.css"> 
+</head>
+
+<body>
+
+<!-- WELCOME OVERLAY -->
+<div id="welcome-overlay" class="overlay">
+    <div class="overlay-content">
+        <h1>Welcome to <span>NutriGuide</span>!</h1>
+        <p>Don’t just count calories — <b>Nourish your future.</b><br>
+        Unlock personalized plans designed for your life and health.</p>
+        <a href="#" id="start-journey-btn" class="btn">Start Your Journey</a>
+    </div>
+</div>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="logo">NutriGuide</div>
+    <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#cta" class="btn small">Start Your Plan</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-left">
+        <h1 class="hero-title">
+            Your Smart Path to <span>Sustainable</span><br>
+            & Personalized Nutrition
+        </h1>
+
+        <p class="hero-text">
+            NutriGuide uses <b>AI-powered nutrition</b> to build simple, clear, 
+            effective plans tailored to your goals.
+        </p>
+
+        <a href="#cta" class="btn">Get Started Now</a>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2 class="section-title">Our Mission</h2>
+    <p class="section-text">
+        Nutrition should be simple. NutriGuide combines behavioral science with 
+        AI to build <b>sustainable eating habits</b> without stress.
+    </p>
+</section>
+
+<!-- FEATURES -->
+<section id="features">
+    <h2 class="section-title">Designed for Your Success</h2>
+
+    <div class="features">
+        <div class="card">
+            <span class="icon">🤖</span>
+            <h3>AI Personalized Plan</h3>
+            <p>Adaptive meal plans based on your nutrition profile.</p>
+        </div>
+
+        <div class="card">
+            <span class="icon">🛒</span>
+            <h3>Smart Grocery List</h3>
+            <p>Instant, categorized shopping lists based on your meals.</p>
+        </div>
+
+        <div class="card">
+            <span class="icon">📊</span>
+            <h3>Nutrition Dashboard</h3>
+            <p>Track macros, calories, hydration, and more.</p>
+        </div>
+
+        <div class="card">
+            <span class="icon">🍽️</span>
+            <h3>Quick Recipes</h3>
+            <p>Easy, tasty 10–15 minute meals.</p>
+        </div>
+
+        <div class="card">
+            <span class="icon">🤝</span>
+            <h3>Community Support</h3>
+            <p>Get help from nutritionists & like-minded members.</p>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+    <h2 class="section-title">What Our Users Say</h2>
+
+    <div class="testimonial-grid">
+        <div class="testimonial-card">
+            <p>“Affordable meals, fast recipes, and a clean UI. Perfect for students.”</p>
+            <span>— Aarav P.</span>
+        </div>
+
+        <div class="testimonial-card">
+            <p>“The grocery automation is genius. I lost weight consistently.”</p>
+            <span>— Sarah K.</span>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+    <h2 class="section-title">Ready to Transform Your Health?</h2>
+    <p class="section-text">Your personalized nutrition plan is just one click away.</p>
+    <a href="#" class="btn">Start Free Trial</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    © 2025 NutriGuide — Smart Personalized Diet Planning
+</footer>
+
+<script>
+document.getElementById('start-journey-btn').addEventListener('click', function(e){
+    e.preventDefault();
+    const overlay = document.getElementById('welcome-overlay');
+    overlay.style.opacity = '0';
+    setTimeout(()=> overlay.style.display = 'none', 500);
+});
+</script>
+
+</body>
+</html>
