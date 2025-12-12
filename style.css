@@ -1,0 +1,324 @@
+/* --- GLOBAL BOX-SIZING RESET --- */
+* {
+    box-sizing: border-box;
+}
+
+/* --- Global Styles --- */
+body{
+    margin:0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:#0b0f19; /* deep dark background */
+    color:white;
+    line-height:1.6;
+    max-width: 100vw; 
+    overflow-x: hidden; 
+}
+
+/* 🌟 OVERLAY STYLES 🌟 */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 20, 27, 0.98); /* replaced purple tint */
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease;
+}
+
+.overlay-content {
+    text-align: center;
+    max-width: 600px;
+    padding: 40px;
+    background: #0f141b; /* new background */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid #16202a; /* border changed */
+}
+
+.overlay-content h1 {
+    font-size: 3rem;
+    color: #45f0c3;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.overlay-content p {
+    font-size: 1.25rem;
+    color: #c7c9d9;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+/* --- Navigation --- */
+nav{
+    width:100%;
+    padding:20px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#0f141b; /* removed purple */
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+nav .logo{
+    font-size:1.6rem;
+    font-weight:800;
+    color:#45f0c3;
+    letter-spacing:1px;
+}
+
+nav a{
+    color:#c9d4ff;
+    text-decoration:none;
+    margin:0 15px;
+    font-size:0.95rem;
+    transition:color 0.3s ease;
+}
+
+nav a:hover{
+    color:#45f0c3;
+}
+
+/* --- Hero Section --- */
+.hero{
+    padding:140px 50px 100px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.hero-left{
+    max-width:600px;
+}
+
+.hero-title{
+    font-size:3.5rem;
+    font-weight:800;
+    line-height:1.1;
+    margin-bottom:15px;
+}
+
+.hero-title span{
+    color:#45f0c3;
+}
+
+.hero-text{
+    color:#c7c9d9;
+    margin:20px 0;
+    font-size:1.1rem;
+    line-height:1.7;
+}
+
+.btn{
+    background:#45f0c3;
+    color:#0b0f19;
+    padding:16px 30px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:700;
+    display:inline-block;
+    margin-top:25px;
+    transition:background 0.3s ease, transform 0.3s ease;
+    box-shadow:0 5px 15px rgba(69, 240, 195, 0.4);
+}
+
+.btn:hover{
+    background:#33caa3;
+    transform:translateY(-2px);
+}
+
+/* --- Section Base --- */
+section{
+    padding:100px 50px;
+}
+
+h2{
+    font-size:2.5rem;
+    margin-bottom:20px;
+    font-weight:800;
+    text-align:center;
+}
+
+.section-text{
+    color:#c7c9d9;
+    max-width:800px;
+    line-height:1.7;
+    margin:0 auto 50px;
+    text-align:center;
+}
+
+/* --- Feature Cards --- */
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:30px;
+    max-width:1200px;
+    margin:0 auto;
+}
+
+.card{
+    background:#101820; /* replaced purple card background */
+    padding:35px;
+    border-radius:18px;
+    border:1px solid #16202a; /* new border */
+    transition:0.4s;
+    box-shadow:0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#45f0c3;
+    box-shadow:0 12px 30px rgba(69, 240, 195, 0.15);
+}
+
+.card .icon-placeholder {
+    font-size:2.5rem;
+    color:#45f0c3;
+    margin-bottom:15px;
+    display:block;
+}
+
+.card h3{
+    margin-bottom:10px;
+    color:white;
+    font-size:1.3rem;
+    font-weight:700;
+}
+
+.card p{
+    color:#c7c9d9;
+    font-size:1rem;
+    line-height:1.6;
+}
+
+/* --- Testimonials Section --- */
+#testimonials {
+    background:#0f141b; /* changed */
+}
+.testimonial-grid {
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+.testimonial-card {
+    background:#101820; /* changed */
+    padding:30px;
+    border-radius:12px;
+    max-width:350px;
+    border-left:4px solid #45f0c3;
+}
+.testimonial-card p {
+    font-style:italic;
+    margin-bottom:15px;
+    color:#c7c9d9;
+}
+.testimonial-card span {
+    display:block;
+    font-weight:700;
+    color:white;
+}
+
+/* --- CTA Section --- */
+#cta {
+    text-align:center;
+    padding:80px 50px;
+    background:linear-gradient(90deg, #0f141b 0%, #101820 100%); /* NEW gradient */
+    border-radius:10px;
+    margin:0 auto;
+    max-width:1200px;
+}
+#cta h2 {
+    font-size:2.2rem;
+}
+#cta .section-text {
+    margin-bottom:30px;
+}
+
+/* --- Footer --- */
+footer{
+    padding:30px;
+    text-align:center;
+    background:#0f141b; /* new footer */
+    color:#c7c9d9;
+    margin-top:0;
+    border-top:1px solid #16202a;
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 768px) {
+    nav, .hero, section {
+        padding:20px;
+    }
+    .hero {
+        padding-top:80px;
+        text-align:center;
+        justify-content:center;
+    }
+    .hero-title {
+        font-size:2.5rem;
+    }
+    h2 {
+        font-size:2rem;
+    }
+    nav div:last-child {
+        display:none;
+    }
+    #cta {
+        margin:40px 20px;
+    }
+    .overlay-content h1 {
+        font-size: 2rem;
+    }
+    .overlay-content p {
+        font-size: 1rem;
+    }
+}
+/* Base card styling */
+.card {
+    background: #111627;
+    padding: 35px;
+    border-radius: 18px;
+    border: 1px solid #1f273b;
+    transition: 0.4s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+
+    /* link fix */
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    outline: none !important;
+}
+
+/* Hover effect (same for both <div> and <a>) */
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #45f0c3;
+    box-shadow: 0 12px 30px rgba(69,240,195,0.15);
+    text-decoration: none !important;
+}
+
+/* Remove blue outline, tap highlight, weird glow */
+.card:focus,
+.card:active {
+    outline: none !important;
+    box-shadow: 0 12px 30px rgba(69,240,195,0.15);
+    text-decoration: none !important;
+}
+
+/* Remove link underline inside card entirely */
+.card-link {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+
+
